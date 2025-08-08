@@ -1,4 +1,4 @@
-title: My Robot Project
+title: UKMARSBOT
 description: Build guide and documentation
 # theme: architect
 
@@ -19,3 +19,7 @@ just_the_docs:
   fonts:
     body: "'Roboto', sans-serif"
     headings: "'Orbitron', sans-serif"
+  
+  collections:
+    docs:
+      collapsible_sidebar: true
