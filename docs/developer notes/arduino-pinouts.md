@@ -1,26 +1,32 @@
+---
+title: "Arduino Pinouts"
+nav_order: 2
+parent: "Developer Notes"
+---
+
 # Arduino Nano Robot Pinouts
 
 Tha arduino nano has a good selection of IO pins in a 30 pin DIP footprint.
 
 There are
 
- | Arduino Nano            | Specifications          |
- | :---------------------- | :---------------------- |
- | Microcontroller         | ATmega328P              |
- | Architecture            | AVR                     |
- | Operating Voltage       | 5 Volts                 |
- | Input                   | Voltage  (7-12) Volts   |
- | Flash                   | 30 KB + 2k booltolader  |
- | SRAM                    | 2KB                     |
- | EEPROM                  | 1 KB                    |
- | Clock                   | 16 MHz                  |
- | Analog                  | up to 8 Pins            |
- | DC                      | Max 40mA per pin        |
- | Digital                 | up to 22 pins           |
- | PWM                     | up to 6 channels        |
- | Power Consumption       | 19 mA                   |
- | PCB                     | Size  18 x 45 mm        |
- | Weight                  | 7g                      |
+ | Arduino Nano      | Specifications         |
+ | :---------------- | :--------------------- |
+ | Microcontroller   | ATmega328P             |
+ | Architecture      | AVR                    |
+ | Operating Voltage | 5 Volts                |
+ | Input             | Voltage  (7-12) Volts  |
+ | Flash             | 30 KB + 2k booltolader |
+ | SRAM              | 2KB                    |
+ | EEPROM            | 1 KB                   |
+ | Clock             | 16 MHz                 |
+ | Analog            | up to 8 Pins           |
+ | DC                | Max 40mA per pin       |
+ | Digital           | up to 22 pins          |
+ | PWM               | up to 6 channels       |
+ | Power Consumption | 19 mA                  |
+ | PCB               | Size  18 x 45 mm       |
+ | Weight            | 7g                     |
 
 
 ## Analogue Input
@@ -36,22 +42,22 @@ It is probaby best to assign purely analogue input functions to pins A7 and A6 f
 
 There are a further 14 digital IO pins serving a variety of functions. These are labelled as pins 0..13. Due to the internal architecture of the AtMega328p and the design of the core Arduino software, some pins are expected to be used for certain purposes and it is best to use them for that where possible.
 
- | Pin   | Purpose                                                       |
- | :--: | ------------------------------------------------------------   |
- |   0  |  Serial RXD. Used by the bootloader and default serial port    |
- |   1  |  Serial TXD. used by the bootloader and default serial port    |
- |   2  |  INT0 - external interrupt - best for encoder interrupt        |
- |   3  |  INT0 - external interrupt - best for encoder interrupt        |
- |   4  |  usually free for any purpose                                  |
- |   5  |  OC0B - 960 Hz fast PWM - no interference from Tone or Servo   |
- |   6  |  OC0A - 960 Hz fast PWM - no interference from Tone or Servo   |
- |   7  |  usually free for any purpose                                  |
- |   8  |  usually free for any purpose                                  |
- |   9  |  OC1A  Timer 1 output compare A - Used by Servo library        |
- |  10  |  OC1B  Timer 1 output compare B - Used by Servo library        |
- |  11  |  MOSI  SPI data in - SPI needs this pin if you use it          |
- |  12  |  MISO  SPI data out - SPI needs this pin if you use it         |
- |  13  |  SCK and status LED - good for user feedback                   |
+ |  Pin  | Purpose                                                     |
+ | :---: | ----------------------------------------------------------- |
+ |   0   | Serial RXD. Used by the bootloader and default serial port  |
+ |   1   | Serial TXD. used by the bootloader and default serial port  |
+ |   2   | INT0 - external interrupt - best for encoder interrupt      |
+ |   3   | INT0 - external interrupt - best for encoder interrupt      |
+ |   4   | usually free for any purpose                                |
+ |   5   | OC0B - 960 Hz fast PWM - no interference from Tone or Servo |
+ |   6   | OC0A - 960 Hz fast PWM - no interference from Tone or Servo |
+ |   7   | usually free for any purpose                                |
+ |   8   | usually free for any purpose                                |
+ |   9   | OC1A  Timer 1 output compare A - Used by Servo library      |
+ |  10   | OC1B  Timer 1 output compare B - Used by Servo library      |
+ |  11   | MOSI  SPI data in - SPI needs this pin if you use it        |
+ |  12   | MISO  SPI data out - SPI needs this pin if you use it       |
+ |  13   | SCK and status LED - good for user feedback                 |
 
 
 ## Analogue Output (PWM)
@@ -74,12 +80,12 @@ Almost all of the Arduino pins can be used to generate pin change interrupts. Th
 
 Most likely, the following would be needed for the functions in a small multi-purpose robot:
 
- | Function   | Requirement   | Candidate Arduino pins |
- | ---------- | ------------- | ---------- |
- | Motor Drive |  Four pins. Each motor needs PWM plus direction |  5 - PWM Left<br>6 - PWM Right<br>7 - Dir Left<br>8 - Dir Right  |
- | Encoders    |  Four pins. Chan A/B for each motor  |  2 - Left, Chan A<br>3 - Right, Chan A<br>9 - Left, Chan B<br>10 - Right, Chan B |
- | Sensors     |  Five inputs. Battery, Sensors and markers |  A0..A3 Line/Wall sensors<br>A6 - Start marker sensor<br>A7- battery voltage monitor |
- | Sensor Emitters |  Turn on/off all sensor emitters  |  4 - Digital out  |
+ | Function        | Requirement                                    | Candidate Arduino pins                                                              |
+ | --------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
+ | Motor Drive     | Four pins. Each motor needs PWM plus direction | 5 - PWM Left<br>6 - PWM Right<br>7 - Dir Left<br>8 - Dir Right                      |
+ | Encoders        | Four pins. Chan A/B for each motor             | 2 - Left, Chan A<br>3 - Right, Chan A<br>9 - Left, Chan B<br>10 - Right, Chan B     |
+ | Sensors         | Five inputs. Battery, Sensors and markers      | A0..A3 Line/Wall sensors<br>A6 - Start marker sensor<br>A7- battery voltage monitor |
+ | Sensor Emitters | Turn on/off all sensor emitters                | 4 - Digital out                                                                     |
 
 That leaves pins 11, 12, A4 and A5. Some kind of user input is desireable and another status LED might be useful. It is unlikely that SPI or I2C is used but it would be sensible to use either 11,12 or A4,A5 for these two pin assignments so that they are easily swapped around should there be a desire to add some other device. Note that any SPI device will probably want two more additional pins for slave select and command/data selection depending on the device.
 
@@ -98,30 +104,30 @@ That leaves pins 11, 12, A4 and A5. Some kind of user input is desireable and an
 * battery voltage monitor is essential for good motor control.
 
 
- | Pin  |  Purpose                                                       | Fixed |
- |:----:| :-----------------------------------------------------------   | :---: |
- |   0  |  Serial RXD. Used by the bootloader and default serial port    |   Y   |
- |   1  |  Serial TXD. used by the bootloader and default serial port    |   Y   |
- |   2  |  Left Encoder Channel A                                        |   Y   |
- |   3  |  Right Encoder Channel A                                       |   Y   |
- |   4  |  Left Encoder Channel B                                        |   -   |
- |   5  |  Right Encoder Channel B                                       |   -   |
- |   6  |  User Button or LED (can be PWM'ed)                            |   -   |
- |   7  |  Left Motor Direction                                          |   -   |
- |   8  |  Right Motor Direction                                         |   -   |
- |   9  |  Left Motor PWM (OC1A)                                         |   -   |
- |  10  |  Right motor PWM (OC1B)                                        |   -   |
- |  11  |  Emitter on/off                                                |   -   |
- |  12  |  Spare I/O - emitter control, LED, etc                         |   -   |
- |  13  |  SCK and status LED - good for user feedback                   |   Y   |
- |  A0  |  Wall/Line Sensor                                              |   Y   |
- |  A1  |  Wall/Line Sensor                                              |   Y   |
- |  A2  |  Wall/Line Sensor                                              |   Y   |
- |  A3  |  Wall/Line Sensor                                              |   Y   |
- |  A4  |  Sensor? I2C SDA?                                              |   -   |
- |  A5  |  Sensor? I2C SCL?                                              |   -   |
- |  A6  |  Function Select Switches                                      |   -   |
- |  A7  |  Battery Voltage monitor                                       |   Y   |
+ |  Pin  | Purpose                                                    | Fixed |
+ | :---: | :--------------------------------------------------------- | :---: |
+ |   0   | Serial RXD. Used by the bootloader and default serial port |   Y   |
+ |   1   | Serial TXD. used by the bootloader and default serial port |   Y   |
+ |   2   | Left Encoder Channel A                                     |   Y   |
+ |   3   | Right Encoder Channel A                                    |   Y   |
+ |   4   | Left Encoder Channel B                                     |   -   |
+ |   5   | Right Encoder Channel B                                    |   -   |
+ |   6   | User Button or LED (can be PWM'ed)                         |   -   |
+ |   7   | Left Motor Direction                                       |   -   |
+ |   8   | Right Motor Direction                                      |   -   |
+ |   9   | Left Motor PWM (OC1A)                                      |   -   |
+ |  10   | Right motor PWM (OC1B)                                     |   -   |
+ |  11   | Emitter on/off                                             |   -   |
+ |  12   | Spare I/O - emitter control, LED, etc                      |   -   |
+ |  13   | SCK and status LED - good for user feedback                |   Y   |
+ |  A0   | Wall/Line Sensor                                           |   Y   |
+ |  A1   | Wall/Line Sensor                                           |   Y   |
+ |  A2   | Wall/Line Sensor                                           |   Y   |
+ |  A3   | Wall/Line Sensor                                           |   Y   |
+ |  A4   | Sensor? I2C SDA?                                           |   -   |
+ |  A5   | Sensor? I2C SCL?                                           |   -   |
+ |  A6   | Function Select Switches                                   |   -   |
+ |  A7   | Battery Voltage monitor                                    |   Y   |
 
 ## IMU
 

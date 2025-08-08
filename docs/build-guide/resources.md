@@ -1,3 +1,9 @@
+---
+title: "Resources"
+nav_order: 3
+parent: "Build Guide"
+---
+
 # Some possibly useful resources
 
 

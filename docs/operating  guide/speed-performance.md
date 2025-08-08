@@ -1,7 +1,9 @@
 ---
-title: "Performance"
-nav_order: 1
+title: "Speed & Performance"
+nav_order: 2
+parent: "Operating Guide"
 ---
+
 
 # Speed Performance
 

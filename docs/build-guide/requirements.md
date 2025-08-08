@@ -1,3 +1,9 @@
+---
+title: "Requirements"
+nav_order: 2
+parent: "Build Guide"
+---
+
 # UKMARSBOT Specification
 
 * This is an entry level robot able to be built by adults, students or schoolchildren from readily available parts that are likely to remain available for several years using the provided PCBs with minimal tools and expected skill levels. Some soldering is expected but not of small Surface Mount Devices (SMDs).

@@ -1,6 +1,6 @@
 ---
-title: "Author Guides"
-nav_order: 4
+title: "Notes"
+nav_order: 6
 has_children: true
 ---
 

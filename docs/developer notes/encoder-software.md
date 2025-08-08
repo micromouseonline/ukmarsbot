@@ -1,3 +1,9 @@
+---
+title: "Encoder Software"
+nav_order: 3
+parent: "Developer Notes"
+---
+
 # Motor Encoders
 
 To measure the motor rotation, the motor shafts are attached to quadrature encoders. The encoders generate a series of pulses on two outputs, Channel A and Channel B, as the motors rotate. The frequency of the pulses increases as the motors turn faster. The pulses are arranged so that they overlap:
@@ -27,10 +33,10 @@ If the motor is turning in the opposite direction, counter clockwise, the edges 
 
 A little thought should show that the direction of rotation can be worked out just by examining the state of Channel B when Channel A changes. A table shows the results
 
-|           |  B Low | B High |
-|----------:|:------:|:------:|
-| A Rising  |   CW   |   CCW  |
-| A Falling |   CCW  |   CW   |
+|           | B Low | B High |
+| --------: | :---: | :----: |
+|  A Rising |  CW   |  CCW   |
+| A Falling |  CCW  |   CW   |
 
 So long as the edges can be detected, it is easy enough to work out the direction of rotation.
 
@@ -56,22 +62,22 @@ This is set up as indicated in the specification for the External Interrupt Cont
 
 The **External Interrupt 0** is activated by the external pin INT0 if the SREG I-flag and the corresponding interrupt mask are set. The level and edges on the external INT0 pin that activate the interrupt are defined as
 
-|ISC01 | ISC00 | Description
-|:----:|:-----:|------------|
-|  0   |   0   | Low Level of INT0 generates interrupt
-|  0   |   1   | Logical change of INT0 generates interrupt
-|  1   |   0   | Falling Edge of INT0 generates interrupt
-|  1   |   1   | Rising Edge of INT0 generates interrupt
+| ISC01 | ISC00 | Description                                |
+| :---: | :---: | ------------------------------------------ |
+|   0   |   0   | Low Level of INT0 generates interrupt      |
+|   0   |   1   | Logical change of INT0 generates interrupt |
+|   1   |   0   | Falling Edge of INT0 generates interrupt   |
+|   1   |   1   | Rising Edge of INT0 generates interrupt    |
 
 
 The **External Interrupt 1** is activated by the external pin INT1 if the SREG I-flag and the corresponding interrupt mask are set. The level and edges on the external INT1 pin that activate the interrupt are defined in Table 12-1
 
-|ISC11 | ISC10 | Description
-|:----:|:-----:|------------|
-|  0   |   0   | Low Level of INT1 generates interrupt
-|  0   |   1   | Logical change of INT1 generates interrupt
-|  1   |   0   | Falling Edge of INT1 generates interrupt
-|  1   |   1   | Rising Edge of INT1 generates interrupt
+| ISC11 | ISC10 | Description                                |
+| :---: | :---: | ------------------------------------------ |
+|   0   |   0   | Low Level of INT1 generates interrupt      |
+|   0   |   1   | Logical change of INT1 generates interrupt |
+|   1   |   0   | Falling Edge of INT1 generates interrupt   |
+|   1   |   1   | Rising Edge of INT1 generates interrupt    |
 
 To enable these interrupts, bits must be set in the external interrupt mask register EIMSK
 

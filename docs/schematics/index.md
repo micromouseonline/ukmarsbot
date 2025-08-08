@@ -1,5 +1,8 @@
 ---
 title: "Schematics"
-nav_order: 2
-has_children: true
+nav_order: 8
+has_children: false
+nav_exclude: false
 ---
+
+we will have links to the schematics

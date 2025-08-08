@@ -1,3 +1,9 @@
+---
+title: "Using GitHub"
+nav_order: 1
+parent: "Notes"
+---
+
 # Using Github
 
 An outline guide for new users of GitHub

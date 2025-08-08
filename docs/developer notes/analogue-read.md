@@ -1,3 +1,9 @@
+---
+title: "Analogue Read"
+nav_order: 1
+parent: "Developer Notes"
+---
+
 # Analogue Input on the Arduino Nano
 
 The Arduino software provides a convenient function for reading the analogue input pints, A0-A7. Be aware that analogue input is pretty slow on the Arduino by default. Reading a single channel can take 100us even if the task is not interrupted by anything else. Add at least another 10us if the result is to be simply converted to a floating point value.
@@ -26,16 +32,16 @@ The time taken for each call is measured by setting and clearing a port pin by d
 
 ## Results
 
-|ADPS2|ADPS1|ADPS0|Divisor|analogRead()| Variance |
-|:---:|:---:|:---:|------:|-----------:|---------:|
-|  0  |  0  |  0  |   2   |     16 us  |         -|
-|  0  |  0  |  1  |   2   |     16 us  |         -|
-|  0  |  1  |  0  |   4   |     18 us  |195.0493  |
-|  0  |  1  |  1  |   8   |     22 us  | 18.9510  |
-|  1  |  0  |  0  |  16   |     28 us  |  1.0999  |
-|  1  |  0  |  1  |  32   |     43 us  |  0.4864  |
-|  1  |  1  |  0  |  64   |     68 us  |  0.2682  |
-|  1  |  1  |  1  | 128   |    120 us  |  0.3425  |
+| ADPS2 | ADPS1 | ADPS0 | Divisor | analogRead() | Variance |
+| :---: | :---: | :---: | ------: | -----------: | -------: |
+|   0   |   0   |   0   |       2 |        16 us |        - |
+|   0   |   0   |   1   |       2 |        16 us |        - |
+|   0   |   1   |   0   |       4 |        18 us | 195.0493 |
+|   0   |   1   |   1   |       8 |        22 us |  18.9510 |
+|   1   |   0   |   0   |      16 |        28 us |   1.0999 |
+|   1   |   0   |   1   |      32 |        43 us |   0.4864 |
+|   1   |   1   |   0   |      64 |        68 us |   0.2682 |
+|   1   |   1   |   1   |     128 |       120 us |   0.3425 |
 
 Normally all three bits are set to 1.
 
