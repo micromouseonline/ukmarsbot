@@ -4,8 +4,9 @@ description: Build guide and documentation
 
 # _config.yml
 # remote_theme: just-the-docs/just-the-docs@v0.5.2
-theme: documentation-theme
+# theme: documentation-theme
+theme: minimal-mistakes
 
-# just_the_docs:
-#   navigation:
-#     structure: nested
+just_the_docs:
+  navigation:
+    structure: nested
