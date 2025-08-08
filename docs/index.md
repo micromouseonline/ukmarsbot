@@ -1,4 +1,12 @@
+---
+title: "UKMARSbot Documentation"
+nav_order: 1
+has_children: true
+---
+Welcome to the UKMARSbot documentation hub.
+
 # 🤖 UKMARSBOT Pages Demo
+
 
 Welcome to the official guide for **[UKMARSBOT]**! This page walks you through everything you need to assemble, wire, and test your robot.
 
