@@ -1,6 +1,6 @@
-# 🤖 GEMINI Build Guide
+# 🤖 UKMARSBOT Pages Demo
 
-Welcome to the official build guide for **[UKMARSBOT GEMINI]**! This page walks you through everything you need to assemble, wire, and test your robot.
+Welcome to the official build guide for **[UKMARSBOT]**! This page walks you through everything you need to assemble, wire, and test your robot.
 
 ---
 
@@ -25,7 +25,7 @@ Refer to the [exploded view image](./images/exploded_view.png) for part placemen
 
 ## ⚡ Electronics & Wiring
 
-All schematics are available in the [ECAD folder](./ecad/schematic.pdf).  
+All schematics are available in the [ECAD folder](./schematics/Arduino_Nano-Rev3.2-SCH.pdf).  
 Follow the wiring diagram to connect motors, sensors, and the microcontroller.
 
 ### Microcontroller
