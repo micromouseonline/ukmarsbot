@@ -10,3 +10,9 @@ remote_theme: just-the-docs/just-the-docs@v0.5.2
 just_the_docs:
   navigation:
     structure: nested
+  color_scheme: dark
+
+  # Custom fonts
+  fonts:
+    body: "'Roboto', sans-serif"
+    headings: "'Orbitron', sans-serif"
