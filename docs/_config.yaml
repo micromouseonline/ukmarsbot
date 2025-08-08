@@ -3,7 +3,7 @@ description: Build guide and documentation
 # theme: architect
 
 # _config.yml
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.5.2
 
 just_the_docs:
   navigation:
