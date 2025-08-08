@@ -1,4 +1,4 @@
 ---
-title: "Schematics"
+title: "Intro"
 nav_order: 1
 ---

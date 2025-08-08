@@ -1,3 +1,8 @@
+---
+title: "Performance"
+nav_order: 1
+---
+
 # Speed Performance
 
 A robot meant for a contest should be designed for good performance. Mostly, this means the best top speed and acceleration. Turning performance is important as well but for now, consider only straight-line motion.
@@ -27,14 +32,14 @@ These motors all come with gearboxes. The purpose of gears is to slow the motor 
 Here is a table showing, for each motor and gearbox, the theoretical maximum speed (in mm/s) that might be expected if the motor is driven with a 6 Volt supply. A real robot would be unlikely to reach this speed due to inefficiencies in the design or the motor drive. These are listed in order of gear ratio to match the encoder resolution table below.
 
 
-|Motor              | 25mm| 32mm|  60mm|  70mm|
-|:------------------|----:|----:|-----:|-----:|
-|Pololu 6V MP  5:1  | 5760| 7372| 13823| 16127|
-|Pololu 6V MP  10:1 | 2880| 3686|  6912|  8063|
-|Pololu 6V HPCB 10:1|	3927|	5027|	 9425| 10996|
-|Pimoroni 6V 11:1   | 2356| 3016|  5655|  6597|
-|Pimoroni 6V 20:1   |	1374|	1759|	 3299|	3848|
-|Pololu 6V HPCB 30:1|	1440|	1843|	 3456|	4032|
+| Motor               | 25mm | 32mm |  60mm |  70mm |
+| :------------------ | ---: | ---: | ----: | ----: |
+| Pololu 6V MP  5:1   | 5760 | 7372 | 13823 | 16127 |
+| Pololu 6V MP  10:1  | 2880 | 3686 |  6912 |  8063 |
+| Pololu 6V HPCB 10:1 | 3927 | 5027 |  9425 | 10996 |
+| Pimoroni 6V 11:1    | 2356 | 3016 |  5655 |  6597 |
+| Pimoroni 6V 20:1    | 1374 | 1759 |  3299 |  3848 |
+| Pololu 6V HPCB 30:1 | 1440 | 1843 |  3456 |  4032 |
 
 Before deciding that the fastest option is the best, have a look at how the choice affects the encoder resolution.
 
@@ -52,18 +57,18 @@ For forward motion, the controller can add together the counts from the left and
 
 Here is a table showing the best effective resolution on one wheel (in mm per count) for various gearbox ratios and wheel sizes. Adding together the counts from both motors effectivly doubles the number of counts per mm.
    
-|Ratio  |25mm |32mm |60mm |70mm |
-|------:|:---:|:---:|:---:|:---:|
-|    5:1|1.309|1.676|3.142|3.665|
-|   10:1|0.654|0.838|1.571|1.833|
-|   11:1|0.595|0.762|1.428|1.666|
-|   20:1|0.327|0.419|0.785|0.916|
-|   30:1|0.218|0.279|0.524|0.611|
+| Ratio | 25mm  | 32mm  | 60mm  | 70mm  |
+| ----: | :---: | :---: | :---: | :---: |
+|   5:1 | 1.309 | 1.676 | 3.142 | 3.665 |
+|  10:1 | 0.654 | 0.838 | 1.571 | 1.833 |
+|  11:1 | 0.595 | 0.762 | 1.428 | 1.666 |
+|  20:1 | 0.327 | 0.419 | 0.785 | 0.916 |
+|  30:1 | 0.218 | 0.279 | 0.524 | 0.611 |
 
 It can be convenient to work in terms of counts per meter. In the software, the counts from each encoder are added together to give a calibration value that, for standard 32mm tyres, should be about:
 
-|        Ratio |  5:1 | 10:1 | 11:1 | 20:1 | 30:1 |
-|--------------|------|------|------|------|------|
+| Ratio        | 5:1  | 10:1 | 11:1 | 20:1 | 30:1 |
+| ------------ | ---- | ---- | ---- | ---- | ---- |
 | counts per m | 1193 | 2387 | 2625 | 4773 | 7160 |
 
 ## Summary
