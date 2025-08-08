@@ -10,6 +10,8 @@ has_toc: true
 
 Before you start building the UKMARSBOT you will need to get yourself organised! You have obviously found the UKMARSBOT build guide, so mark that page as a favourite in your browser as you will be referencing it quite a lot. Below is a checklist of things to do:
 
+alhdjgla
+
 ## First section
 Spend some time looking at all the Building Guide Pages so you have a good idea of what will be involved, so that you can be confident that you will be able to do everything needed.
 Have a look at the Tools and Materials page and make a list of the tools and parts that you need to get.
