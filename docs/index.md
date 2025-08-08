@@ -1,6 +1,6 @@
-# 🤖 Robot Build Guide
+# 🤖 GEMINI Build Guide
 
-Welcome to the official build guide for **[Your Robot Name]**! This page walks you through everything you need to assemble, wire, and test your robot.
+Welcome to the official build guide for **[UKMARSBOT GEMINI]**! This page walks you through everything you need to assemble, wire, and test your robot.
 
 ---
 
