@@ -3,6 +3,7 @@ title: "Build Guide"
 nav_order: 2
 has_children: true
 show_children: false
+has_toc: true
 ---
 
 # Build guide goes here
