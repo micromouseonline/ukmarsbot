@@ -1,3 +1,10 @@
 title: My Robot Project
 description: Build guide and documentation
-theme: architect
+# theme: architect
+
+# _config.yml
+theme: just-the-docs
+
+just_the_docs:
+  navigation:
+    structure: nested
