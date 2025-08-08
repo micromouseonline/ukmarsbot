@@ -3,8 +3,9 @@ description: Build guide and documentation
 # theme: architect
 
 # _config.yml
-remote_theme: just-the-docs/just-the-docs@v0.5.2
+# remote_theme: just-the-docs/just-the-docs@v0.5.2
+theme: documentation-theme
 
-just_the_docs:
-  navigation:
-    structure: nested
+# just_the_docs:
+#   navigation:
+#     structure: nested
