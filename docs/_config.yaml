@@ -3,9 +3,9 @@ description: Build guide and documentation
 # theme: architect
 
 # _config.yml
-# remote_theme: just-the-docs/just-the-docs@v0.5.2
+remote_theme: just-the-docs/just-the-docs@v0.5.2
 # theme: documentation-theme
-theme: minimal-mistakes
+# theme: minimal-mistakes
 
 just_the_docs:
   navigation:
