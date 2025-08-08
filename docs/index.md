@@ -2,6 +2,7 @@
 title: "UKMARSbot Documentation"
 nav_order: 1
 has_children: true
+show_children: false
 ---
 Welcome to the UKMARSbot documentation hub.
 
